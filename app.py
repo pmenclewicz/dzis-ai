@@ -2,7 +2,7 @@ import feedparser
 from datetime import datetime
 
 # URL kanału RSS z wiadomościami o sztucznej inteligencji / technologii
-RSS_URL = "https://www.theverge.com/rss/index.xml"
+RSS_URL = "https://spidersweb.pl/kategoria/sztuczna-inteligencja/feed"
 
 def pobierz_newsy():
     print("Pobieranie najnowszych wiadomości...")
