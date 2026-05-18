@@ -12,6 +12,10 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    # Wymuszenie użycia Node.js 24 w akcjach zgodnie z zaleceniem GitHuba
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
     - name: Pobranie kodu repozytorium
@@ -20,7 +24,7 @@ jobs:
     - name: Konfiguracja Pythona
       uses: actions/setup-python@v5
       with:
-        python-node-version: '3.10'
+        python-version: '3.10' # Poprawiony parametr (zamiast python-node-version)
 
     - name: Instalacja bibliotek
       run: |
